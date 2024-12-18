@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   version="1.1"
+   width="464.11499"
+   height="135.51199"
+   viewBox="5 0 464.11499 135.51199"
+   id="svg94"
+   sodipodi:docname="321_025-004-002-010-008-005_solution-01.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs98" />
+  <sodipodi:namedview
+     id="namedview96"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.2264151"
+     inkscape:cx="224.57627"
+     inkscape:cy="91.627118"
+     inkscape:window-width="1920"
+     inkscape:window-height="1117"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg94" />
+  <title
+     id="title2">JChiffresFX solution graph</title>
+  <line
+     x1="373.4559"
+     y1="67.755981"
+     x2="441.65506"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line4" />
+  <line
+     x1="305.25668"
+     y1="17.712854"
+     x2="373.4559"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line6" />
+  <line
+     x1="237.0575"
+     y1="67.755981"
+     x2="305.25668"
+     y2="17.712854"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line8" />
+  <line
+     x1="168.85831"
+     y1="17.712854"
+     x2="237.0575"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line10" />
+  <g
+     id="g16"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="166.83333"
+       y="42.25"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#e9967a"
+       id="rect12" />
+    <text
+       x="189.58333"
+       y="58.283333"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text14">25</text>
+  </g>
+  <line
+     x1="168.85831"
+     y1="117.79913"
+     x2="237.0575"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line18" />
+  <line
+     x1="100.65912"
+     y1="67.755981"
+     x2="168.85831"
+     y2="117.79913"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line20" />
+  <line
+     x1="32.459934"
+     y1="17.712854"
+     x2="100.65912"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line22" />
+  <g
+     id="g28"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="15.166667"
+       y="42.25"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#e9967a"
+       id="rect24" />
+    <text
+       x="37.916668"
+       y="58.283333"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text26">8</text>
+  </g>
+  <line
+     x1="32.459934"
+     y1="117.79913"
+     x2="100.65912"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line30" />
+  <g
+     id="g36"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="15.166667"
+       y="148.41667"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#e9967a"
+       id="rect32" />
+    <text
+       x="37.916668"
+       y="164.45"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text34">5</text>
+  </g>
+  <g
+     id="g42"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="166.83333"
+       y="148.41667"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#add8e6"
+       id="rect38" />
+    <text
+       x="189.58333"
+       y="164.45"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text40">13</text>
+  </g>
+  <g
+     id="g52"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)"
+     style="fill:#c8c4b7">
+    <circle
+       cx="113.75"
+       cy="106.16666"
+       r="13.541667"
+       fill="#f5f5f5"
+       id="circle44"
+       style="fill:#c8c4b7" />
+    <g
+       id="g50"
+       style="fill:#c8c4b7">
+      <line
+         x1="113.47916"
+         y1="100.69583"
+         x2="113.47916"
+         y2="111.09583"
+         stroke="#000000"
+         stroke-width="1.85714px"
+         id="line46"
+         style="fill:#c8c4b7" />
+      <line
+         x1="108.27917"
+         y1="105.89583"
+         x2="118.67916"
+         y2="105.89583"
+         stroke="#000000"
+         stroke-width="1.85714px"
+         id="line48"
+         style="fill:#c8c4b7" />
+    </g>
+  </g>
+  <g
+     id="g58"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="318.5"
+       y="42.25"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#add8e6"
+       id="rect54" />
+    <text
+       x="341.25"
+       y="58.283333"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text56">325</text>
+  </g>
+  <g
+     id="g68"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)"
+     style="fill:#c8c4b7">
+    <circle
+       cx="265.41666"
+       cy="106.16666"
+       r="13.541667"
+       fill="#f5f5f5"
+       id="circle60"
+       style="fill:#c8c4b7" />
+    <g
+       id="g66"
+       style="fill:#c8c4b7">
+      <line
+         x1="261.24582"
+         y1="101.99583"
+         x2="269.04581"
+         y2="109.79583"
+         stroke="#000000"
+         stroke-width="1.85714px"
+         id="line62"
+         style="fill:#c8c4b7" />
+      <line
+         x1="261.24582"
+         y1="109.79583"
+         x2="269.04581"
+         y2="101.99583"
+         stroke="#000000"
+         stroke-width="1.85714px"
+         id="line64"
+         style="fill:#c8c4b7" />
+    </g>
+  </g>
+  <line
+     x1="305.25668"
+     y1="117.79913"
+     x2="373.4559"
+     y2="67.755981"
+     stroke="#000000"
+     stroke-width="1.71px"
+     id="line70" />
+  <g
+     id="g76"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="318.5"
+       y="148.41667"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#e9967a"
+       id="rect72" />
+    <text
+       x="341.25"
+       y="164.45"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text74">4</text>
+  </g>
+  <g
+     id="g82"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)">
+    <rect
+       x="470.16666"
+       y="95.333336"
+       rx="9.1000004"
+       width="45.5"
+       height="21.666666"
+       fill="#90ee90"
+       id="rect78" />
+    <text
+       x="492.91666"
+       y="111.36666"
+       font-size="13.8667px"
+       font-family="sans-serif"
+       text-anchor="middle"
+       id="text80">321</text>
+  </g>
+  <g
+     id="g90"
+     transform="matrix(0.89932997,0,0,0.94272791,-1.6396633,-32.330285)"
+     style="fill:#c8c4b7">
+    <circle
+       cx="417.08334"
+       cy="106.16666"
+       r="13.541667"
+       fill="#f5f5f5"
+       id="circle84"
+       style="fill:#c8c4b7" />
+    <g
+       id="g88"
+       style="fill:#c8c4b7">
+      <line
+         x1="411.61249"
+         y1="105.89583"
+         x2="422.01251"
+         y2="105.89583"
+         stroke="#000000"
+         stroke-width="1.85714px"
+         id="line86"
+         style="fill:#c8c4b7" />
+    </g>
+  </g>
+  <metadata
+     id="metadata347">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>JChiffresFX solution graph</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
