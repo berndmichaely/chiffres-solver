@@ -1,0 +1,182 @@
+goal,op1,op2,op3,op4,op5,op6,comment
+527,8,10,2,9,10,4,
+157,1,9,50,25,10,100,
+294,9,9,1,8,5,8,
+317,8,7,2,5,6,9,
+528,6,9,7,3,50,2,
+175,1,1,3,7,4,4,"5*5*7"
+588,5,4,10,6,8,5,
+847,6,5,1,8,75,2,
+969,10,3,6,1,7,4,
+828,5,4,1,3,10,7,
+801,4,3,4,6,5,10,
+722,100,50,2,1,25,8,"many duplicates"
+593,50,4,5,25,3,7,
+218,5,9,25,2,9,3,
+450,1,3,10,3,8,5,
+887,6,6,1,4,2,50,
+110,3,1,8,25,2,100,
+303,7,4,7,4,10,2,"dupl. x4"
+358,8,25,3,3,8,100,
+287,100,25,1,4,10,1,"dupl. x4"
+475,100,25,6,2,5,5,
+670,9,7,3,9,4,50,
+855,6,2,4,5,100,5,
+712,100,3,7,4,4,1,
+699,6,2,10,5,25,4,"/700 dupl."
+556,10,8,7,2,1,4,"dupl 3->1"
+961,75,4,8,2,3,1,
+336,10,3,50,3,9,6,
+115,8,5,3,5,6,4,
+180,2,6,7,4,100,5,
+160,25,75,7,8,6,10,
+138,5,100,7,10,7,9,"add(1..6)"
+814,2,9,3,5,50,2,
+440,10,2,7,5,3,8,
+963,7,6,2,8,5,75,
+635,7,10,9,9,3,1,"many solutions"
+712,7,3,7,8,8,1,
+639,2,50,10,75,8,10,
+639,2,50,10,75,8,10,
+678,100,1,7,3,3,7,
+749,50,4,7,2,8,6,
+912,25,9,75,6,50,8,"huge numbers"
+980,1,1,2,7,7,5,
+954,10,1,75,7,50,8,
+267,5,10,8,5,6,100,
+631,25,50,8,100,4,6,"3"
+169,100,4,7,7,75,5,
+523,9,4,6,6,5,100,
+719,5,5,9,50,10,8,"div"
+237,2,5,10,1,8,2,"dupl., 6->1"
+179,9,1,5,100,1,75,"minD:3;2x1"
+122,75,9,100,8,10,7,"minD:3"
+601,8,2,8,5,3,4,"1sol(5)"
+449,1,9,5,75,10,6,"1sol(minD2)"
+817,1,4,6,6,7,2,"-1,+3"
+850,7,75,2,10,10,9,"minD:2"
+504,2,5,8,3,3,1,"500->2sol->1"
+514,5,75,10,7,8,9,"7*8*9+10"
+788,5,75,25,50,5,7,"1 sol. huge num; 2016-04-04"
+748,25,50,75,10,9,5,
+384,100,1,3,8,9,5,"#83"
+934,7,9,8,3,2,5,"1 sol"
+935,7,75,5,100,7,8,"1 sol [4]"
+942,8,7,4,10,6,1,"1 sol no dupl"
+597,7,5,10,2,75,25,"sol ->3,5 op."
+159,7,2,100,3,75,10,"1171 sol"
+961,6,1,7,3,4,5,"1 sol: 31^2"
+471,75,50,100,25,3,9,"2 big div (#26)"
+660,7,4,7,1,8,2,"1 solution - 3 variants"
+729,3,2,3,9,6,4,"9^3"
+651,50,1,2,5,1,2,"1 solution - 3/1/1 variants"
+725,8,50,8,6,6,1,"724, 727"
+903,2,7,4,4,9,7,"2 sol"
+608,2,5,8,50,75,8,"1x2, 1x3, ..."
+705,6,2,100,9,75,50,"2+*2"
+658,5,10,5,3,1,1,"U+2, L-8"
+820,7,9,3,9,3,10,"1 div"
+286,1,10,5,3,3,5,"2 solutions, prime factors only"
+484,10,75,10,50,6,2,"482 has 100 sol."
+926,4,7,1,6,4,75,"1 solution – 3 variants"
+926,8,7,1,6,4,75,"1 solution – 2 variants"
+864,1,2,7,10,1,9,"1 solution – 3 variants & sol. with 4 op, but not 5"
+222,9,100,6,8,25,50,"huge num"
+597,8,2,9,6,9,25,"many sol. with 2 div"
+258,1,3,2,7,8,4,"no div"
+263,5,4,3,3,1,5,"1 solution / 3 variants – 262 → 1 solution / 2 variants"
+501,5,25,5,50,3,100,"many divisions"
+279,5,2,7,25,100,1,
+666,4,2,4,1,100,5,"1 solution / 3 variants with large numbers"
+615,3,5,8,1,1,6,"1 solution / 6 variants, prime factors only"
+738,10,1,7,7,1,8,"1 single solution"
+595,9,2,4,6,10,9,"1 single solution"
+908,9,6,4,9,6,5,"1 single solution"
+760,1,2,1,2,7,5,"no upper approximation"
+637,9,10,100,25,3,9,"2 solutions, 3/5 operations"
+307,7,2,100,7,6,6,"many divisions"
+926,2,10,25,2,8,5,"1 solution"
+567,5,3,2,4,3,1,"no upper approximation, lower -27"
+788,8,2,3,10,3,75,"solutions with 3 and 5 operations, but not with 4"
+340,5,75,7,50,10,100,"2 solutions with only 2 operations"
+471,5,10,7,4,5,9,"only solutions with 4 operations, but not with 5"
+814,10,7,8,1,6,5,"6 solutions, prime factors only"
+694,25,9,1,8,10,6,"chain of additions; no divisions"
+170,10,10,1,1,2,4,"chain of additions"
+956,5,5,50,6,1,2,"exactly 1 solution"
+541,6,6,9,2,100,1,"1 solution (with 4 op) / 3 variants"
+668,5,7,5,10,3,7,"4 solutions, 1 with 3 variants"
+102,8,6,2,2,9,100,"simple; many divisions"
+832,3,5,7,2,1,2,"no upper approximation"
+485,8,5,5,1,9,1,"4 solutions, 1 with 3 variants"
+337,2,6,7,1,1,5,"24 solutions, all with same final 5. operation"
+371,7,7,50,8,8,10,"many variants"
+921,7,10,1,8,75,2,"16 solutions, 1 with 15 variants"
+987,8,9,9,7,4,10,"1 solution"
+623,9,2,50,25,8,4,"1 shortest solution with final division"
+318,75,5,25,4,50,10,"11 solutions none without division"
+172,100,5,9,4,5,75,"#500 solutions"
+841,1,2,7,9,50,10,"20 solutions, none containing divisions"
+305,5,7,5,3,1,2,"9 solutions with same final operation"
+937,6,1,8,5,5,6,"(938 with 5*6 twice)"
+495,6,2,5,3,4,6,"(solutions through prime factors only)"
+759,4,3,8,5,4,3,"approximations +1, -2"
+179,1,8,50,7,6,7,"only divisions in final operation (5 operations only)"
+312,75,2,25,100,10,6,"many big divisions; (solution using 50:-)"
+854,4,4,10,3,6,3,"1 solution with 35 variants"
+118,8,5,1,100,6,2,"1000+ solutions"
+225,100,6,5,10,6,75,"many divisions, large intermediate numbers"
+714,4,3,2,6,1,2,"no upper approximation, lower -282"
+304,8,1,2,5,9,100,"100 solutions"
+589,7,6,25,2,8,2,"15 solutions with same last 5. operation with 15 variants"
+777,10,4,6,2,50,2,"2 solutions only, both with large divisions"
+549,2,10,6,2,100,50,"16 solutions, all with divisions, large numbers"
+973,50,8,2,4,75,8,"1 solution with 4 operations, one with each operator, large"
+921,7,7,2,9,4,3,"2 solutions, which are 2 variants of one"
+796,75,1,3,7,9,3,"1 solution"
+272,10,25,8,75,2,100,"large numbers"
+784,7,3,3,4,2,7,"17 solutions, 16 are variations of prime factors, plus 28²"
+683,8,8,1,2,25,7,"2 solutions which are variants of each other regarding mul/div"
+493,7,100,10,50,8,25,"(25000)"
+738,75,7,100,3,1,7,"1 solution (with 3 variants) with 4 operations only, none with 5"
+694,4,4,25,75,1,3,"1 solution with big number and division (2021-11-04)"
+321,5,100,10,6,2,6,"58 solutions of which 55 contain a division"
+572,1,75,4,6,100,10,"1 solution (with 3 variants) with 4 operations only, none with 5"
+745,9,1,8,2,5,4,"10 solutions containing only 1 subtraction (and no division)"
+853,4,2,5,2,25,5,"1 single solution"
+900,50,3,9,10,10,6,"large intermediate results possible"
+689,7,75,1,3,8,1,"16 solutions of which 15 are variants of one with 3 sequential additions"
+493,25,5,1,100,1,8,"divisions contained in calculations with 3 and 4 operations, but not with 5"
+921,2,50,4,100,75,10,"large intermediate results (10000), many divisions"
+832,5,2,1,10,9,25,"last operation by powers of 2 only (2..32)"
+394,5,4,75,25,100,4,"42 solutions, all with at least one division, some with 2 divisions"
+619,1,100,6,10,8,50,"1 solution with 3 operations → large intermediate result"
+324,4,5,1,4,50,1,"only a few solutions ranging from 3 to 5 operations"
+277,50,1,3,5,1,6,"compare solutions #2 ←→ #19 (5 and 6 given → 5=6-1 and 6=5+1)"
+266,1,4,3,9,2,3,"1 solution with 2 variants"
+700,3,50,9,7,2,3,"the 3 solutions with 2 operations are variations of one"
+914,1,100,4,8,7,8,"2 solutions which are variants of one → mul or div"
+378,10,9,3,10,1,5,"73 solutions all ending with a multiplication (1 division overall only)"
+952,75,7,4,10,7,100,"1 solution with 3 operations, none with 4 and several with 5"
+487,4,1,25,8,8,2,"1 solution with 4 operations (none with 5) with 8 variations"
+960,100,6,25,2,4,4,"1 solution with 3 operations, none with 4 and several with 5"
+577,3,7,1,5,6,8,"1 solution (3 variants) with 4 operations, none with 5"
+749,9,1,2,6,9,6,"1 solution"
+713,3,10,3,10,100,9,"1 solution (3 variants) with 4 operations, none with 5"
+705,8,4,4,100,9,10,"4 solutions all containing one (same) division"
+699,9,2,2,10,5,9,"unsolvable (700 is simple)"
+980,9,75,25,7,1,7,"1 solution (sub and mul only)"
+264,3,100,4,50,75,7,"large intermediate results"
+514,7,5,7,1,75,100,"17 solutions with 3 or 4 operations, but none with 5"
+117,4,2,9,4,6,2,"49 solutions, 41 containing a division"
+366,3,50,5,10,6,5,"50 solutions, containing many divisions"
+6606,112,2,3,40,82,3,"'calcul mental' @ 2022-04-11 : (((((112/2)-3)*40)+82)*3)"
+299,1,100,9,6,6,3,"68 solutions, most containing a division, many even two"
+625,100,75,8,2,7,50,"many divisions, huge numbers"
+304,8,10,10,25,100,50,"all of 18 solutions contain at least one division"
+637,4,75,4,7,10,1,"1 solution with 3 operations, 16 with 5, but none with 4"
+722,6,9,4,6,3,25,"exactly 1 solution (containing all operators)"
+180,50,7,10,2,5,25,"many solutions (626)"
+630,4,6,50,75,25,4,"unusually high intermediate numbers (→15750)"
+859,10,7,8,5,4,3,"1 solution with 3 variants"
+806,8,5,9,2,3,9,"1 solution"
