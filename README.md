@@ -1,5 +1,7 @@
 # JChiffresFX – A Chiffres Game solver
 
+![version](doc/shields/version.svg "version")
+
 **JChiffresFX** is an application for solving the **»Chiffres«** part of the game »[Des chiffres et des lettres](https://fr.wikipedia.org/wiki/Des_chiffres_et_des_lettres)«. It will find all solutions (in the form of a sequence of binary operations) while filtering out duplicate and redundant solutions.
 
 You can see some [screenshots here](screenshots.md).
@@ -35,3 +37,15 @@ Hint: To find an existing solution in the table, the easiest way usually is to u
 It is possible that no exact solution exists (e.g.: 1, 2, 3, 4, 5, 6 with goal 999). In this case the calculator searches for the best possible upper and lower narrowing solutions.
 
 The Button **»Clone Tab«** opens a new tab initialized with the same operands as the current tab. This allows to intentionally search for a narrowing solution, even if there is an exact solution.
+
+## Building the application
+
+Have a recent JDK installed, get the sources and run from the root directory:
+
+`> ./gradlew run`
+
+to run the application immediately or
+
+`> ./gradlew installDist`
+
+to build the application into the `./build/install/JChiffresFX` directory.
