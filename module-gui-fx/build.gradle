@@ -1,0 +1,27 @@
+plugins {
+	id 'java-library'
+}
+
+dependencies {
+	implementation project (':module-calc')
+	implementation project (':module-graphics')
+	implementation project (':module-graphics-canvas-fx')
+}
+
+testing {
+	suites {
+		test {
+			useJUnitJupiter(versionJUnit)
+		}
+	}
+}
+
+tasks.named('test') {
+	logger.lifecycle "=> Configuring task »${name}« for JUnit"
+	systemProperty 'java.util.logging.config.file', rootProject.file('logging.properties')
+	//logger.lifecycle "   -> JVM args : $jvmArgs"
+}
+
+javafx {
+	modules = [ 'javafx.base', 'javafx.controls', 'javafx.graphics', 'javafx.swing' ]
+}
