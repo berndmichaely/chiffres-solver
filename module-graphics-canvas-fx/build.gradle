@@ -1,0 +1,11 @@
+plugins {
+	id 'java-library'
+}
+
+dependencies {
+	implementation project (':module-graphics')
+}
+
+javafx {
+	modules = [ 'javafx.graphics' ]
+}
