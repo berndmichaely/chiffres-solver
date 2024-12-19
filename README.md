@@ -48,4 +48,4 @@ to run the application immediately or
 
 `> ./gradlew installDist`
 
-to build the application into the `./build/distributions` directory.
+to build the application into the `./build/install` directory.
