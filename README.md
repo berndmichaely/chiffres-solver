@@ -48,4 +48,4 @@ to run the application immediately or
 
 `> ./gradlew installDist`
 
-to build the application into the `./build/install/JChiffresFX` directory.
+to build the application into the `./build/distributions` directory.
