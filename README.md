@@ -2,7 +2,7 @@
 
 ![version](doc/shields/version.svg "version")
 
-**JChiffresFX** is an application for solving the **»Chiffres«** part of the game »[Des chiffres et des lettres](https://fr.wikipedia.org/wiki/Des_chiffres_et_des_lettres)«. It will find all solutions (in the form of a sequence of binary operations) while filtering out duplicate and redundant solutions.
+**JChiffresFX** is an application for solving the **Chiffres** part of the game **Des chiffres et des lettres** [(see wikipedia)](https://fr.wikipedia.org/wiki/Des_chiffres_et_des_lettres). It will find all solutions (in the form of a sequence of binary operations) while filtering out duplicate and redundant solutions.
 
 ![JChiffresFX Screenshot (5)](doc/screenshots/Screenshot_05.png)
 
