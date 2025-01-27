@@ -85,8 +85,8 @@ final String versionBase = '4.0.0'
 final String build_nr = readSvnRevision()
 final String semVer = build_nr ? "${versionBase}+${build_nr}" : versionBase
 
-final String regexSemVer = '^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$'
-if (!(semVer ==~ regexSemVer)) throw new StopExecutionException("Invalid semantic version »${semVer}«")
+final def regexSemVer = ~/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
+if (!(semVer =~ regexSemVer)) throw new StopExecutionException("Invalid semantic version »${semVer}«")
 
 final def fileVersionShield = file("doc/shields/version.svg")
 		

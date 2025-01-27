@@ -2,8 +2,7 @@ plugins {
 	id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
 }
 
-rootProject.name = 'JChiffresFX'
+//rootProject.name = 'JChiffresFX'
+rootProject.name = 'chiffres-solver'
 
-file('.').eachDirMatch (~'module-.*') { dir ->
-	include dir.getName()
-}
+file '.' eachDirMatch (~'module-.*', { include it.name })
