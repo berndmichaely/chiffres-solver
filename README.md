@@ -4,7 +4,9 @@
 
 **JChiffresFX** is an application for solving the **»Chiffres«** part of the game »[Des chiffres et des lettres](https://fr.wikipedia.org/wiki/Des_chiffres_et_des_lettres)«. It will find all solutions (in the form of a sequence of binary operations) while filtering out duplicate and redundant solutions.
 
-You can see some [screenshots here](screenshots.md).
+![JChiffresFX Screenshot (5)](doc/screenshots/Screenshot_05.png)
+
+You can see more [screenshots here](screenshots.md).
 
 The **objective of the game** is to calculate (in your head and with a time limit, e.g. 40 seconds) a given three digit number from 6 given numbers (in the range 1 to 10, 25, 50, 75, 100) using elementary arithmetic. Each of the given 6 operands must be used at most once.
 
