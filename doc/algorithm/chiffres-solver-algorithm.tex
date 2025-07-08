@@ -1,0 +1,224 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{babel}
+\usepackage{hyperref}
+\usepackage[firstpageonly]{draftwatermark}
+
+%\SetWatermarkText{DRAFT!}
+\SetWatermarkScale{3}
+\SetWatermarkAngle{25}
+%\SetWatermarkColor{red!50!white}
+%\SetWatermarkHorCenter{0.33\paperwidth}
+\SetWatermarkVerCenter{0.66\paperheight}
+
+%opening
+\title{A Chiffres Solver Algorithm}
+\author{Bernd Michaely}
+
+\textwidth 400pt
+
+\begin{document}
+	
+\large
+
+\pagenumbering{roman}
+
+\maketitle
+
+\begin{abstract}
+
+This document describes an algorithm to solve the \emph{Chiffres} problem (that is, the \emph{Chiffres} part of the game \emph{Des Chiffres et des Lettres}).
+
+\end{abstract}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{The Problem}
+
+See \href{https://github.com/berndmichaely/chiffres-solver}{github.com/berndmichaely/chiffres-solver} for a short introduction to the problem and a software implementation in Java/JavaFX.
+\\
+See also: \href{https://fr.wikipedia.org/wiki/Des_chiffres_et_des_lettres}{fr.wikipedia.org/wiki/Des\textunderscore chiffres\textunderscore et\textunderscore des\textunderscore lettres}.
+
+\section{The Algorithm}
+
+\subsection{Initial observations}
+
+We consider the 4 basic arithmetic operation $+$ ($add$), $-$ ($sub$), $*$ ($mul$) and $/$ ($div$) over $\mathbb{N}=\lbrace1, 2, 3, \ldots\rbrace$.
+
+First, let's observe, that all the 4 operations are binary, and two of them are commutative, $(a+b)=(b+a)$ and $(a*b)=(b*a)$, and the others both are not.
+
+That is, for $add$ and $mul$, we need to consider only one of the variants, and can freely choose, which one.
+
+For $sub$, we \emph{can} only consider at most one of the variants, because we do not deal with negative numbers and exclude the case $a-a=0$.
+
+For $div$, we also can or need only consider at most one of the variants, because we do not deal with fractional numbers, and in the case of $1/1=1$, again one of the variants will suffice.
+
+To sum up, we can in all cases use at most one of the two pairs $\left(a \circ b\right)$ and $\left(b \circ a\right)$ and \emph{sort} the operands. That is, when iterating over pairs of operands, instead of using pairs $(a \circ b)$ directly, we calculate with sorted pairs $(a' \circ b')$, where $a' := max \left(a, b\right)$ and $b' := min \left(a, b\right)$.
+
+As can be seen in Table~\ref{table:operands}, it will be sufficient to iterate over the elements above the diagonal only (or below, if you prefer).
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	Operand-Index & $b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ & $\cdots$ \\
+	\hline
+	$a_1$ & $\ddots$ & $(a_1' \circ b_2')$ & $(a_1' \circ b_3')$ & $(a_1' \circ b_4')$ & $(a_1' \circ b_5')$ & $(a_1' \circ b_6')$ & \\
+	\hline
+	$a_2$ &  & $\ddots$ & $(a_2' \circ b_3')$ & $(a_2' \circ b_4')$ & $(a_2' \circ b_5')$ & $(a_2' \circ b_6')$ & \\
+	\hline
+	$a_3$ &  &  & $\ddots$ & $(a_3' \circ b_4')$ & $(a_3' \circ b_5')$ & $(a_3' \circ b_6')$ & \\
+	\hline
+	$a_4$ &  &  &  & $\ddots$ & $(a_4' \circ b_5')$ & $(a_4' \circ b_6')$ & \\
+	\hline
+	$a_5$ &  &  &  &  & $\ddots$ & $(a_5' \circ b_6')$ & \\
+	\hline
+	$a_6$ &  &  &  &  &  & $\ddots$ & \\
+	\hline
+	$\vdots$ &  &  &  &  & &  & $\ddots$ \\
+	\hline
+\end{tabular}
+\caption{\label{table:operands} Operand iteration and sorting}
+\end{table}
+
+\subsection{A simple algorithm}
+
+Now, we want to calculate all solutions for our given problem, and the first intention is, that we will use a recursive algorithm. That is, we pick any pair of operands, apply one of the available operators $\circ \in \lbrace add, sub, mul, div \rbrace$, and then one of two things will happen:
+\begin{itemize}
+	\item the result is the one, we were searching for $\rightarrow$ add the result together with the recursion path to the set of solutions
+	\item otherwise replace the chosen operands with the result and repeat the above step recursively, until only one operand is left.
+\end{itemize}
+
+After finishing recursion, we will have found all syntactical constructs which, evaluated by arithmetic semantics, will provide a solution for our given problem. So great, we are done! Or aren't we? Let's take a closer look at the results.
+
+\subsection{Redundancies}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+	\hline
+	1. operation & 2. operation  & 3. operation  & 4. operation  & 5. operation  \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100+1=101$ &  &  \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100+1=101$ &  &  \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100+1=101$ &  &  \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100+1=101$ &  &  \\
+	\hline
+	$\ldots$ &  &  &  &  \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $5-4=1$ & $100+1=101$ &  \\
+	\hline
+	$4*5=20$ & $5-4=1$ & $20*5=100$ & $100+1=101$ &  \\
+	\hline
+	$5-4=1$ & $4*5=20$ & $20*5=100$ & $100+1=101$ &  \\
+	\hline
+	$\ldots$ &  &  &  &  \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100+4=104$ & $104-4=100$ & $100+1=101$ \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100-4=96$ & $96+4=100$ & $100+1=101$ \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100*4=400$ & $400/4=100$ & $100+1=101$ \\
+	\hline
+	$4*5=20$ & $20*5=100$ & $100/4=25$ & $25*4=100$ & $100+1=101$ \\
+	\hline
+	$\ldots$ &  &  &  &  \\
+	\hline
+\end{tabular}
+\caption{\label{table:redundancies} Solution set with many redundancies for $\lbrace \left(1, 4, 4, 5, 5, 20 \right), 101 \rbrace$}
+\end{table}
+
+Let's assume the following problem: $\left( 1, 4, 4, 5, 5, 20 \right)$ to calculate 101. Let's apply our algorithm and have look at the results. At first, we are happy, because it produces a lot of results, see Table~\ref{table:redundancies}.
+
+But a closer look shows, that we got a lot of redundancies. What is the reason?
+
+\subsubsection{Duplicate values}
+
+First, we have given the same operand values several times. Because the algorithm uses indexed access to an input array (e.g. $op\left[1\right]$ and $op\left[2\right]$ instead of the value 4 and $op\left[3\right]$ and $op\left[4\right]$ instead of the value 5), the same values are used repeatedly as often, as they appear in the input, as we can see in the first block of  Table~\ref{table:redundancies}. Even worse, such duplicate values can appear in addition as intermediate results during the calculation.
+
+\subsubsection{Permutations of operations}
+
+In the second block of  Table~\ref{table:redundancies}, there are solutions, which only differ in the order of their operations, but the operations themselves are the same.
+
+\subsubsection{Inner loops in calculations}
+
+In the third block of  Table~\ref{table:redundancies}, some solution paths contain loops, which return to the same intermediate value again. We would not consider this to be a \emph{new} solution found, but rather a redundancy, which we want to be filtered out.
+
+Think of a route planner, which will present you a way from A over B to C, and then an alternative route from A over B and D and E back to B and C. You wouldn't really appreciate that, would you?
+
+\subsubsection{Redundant single operations}
+
+There is also a fourth source of redundancy: every time we have a solution containing $2+2=4$, there will always be a similar solution containing $2*2=4$. But we can also say, that e.g for $\lbrace\left(1, 2, 4\right), 7\rbrace$, we always find $1+2+4=7$, and also $2*4-1=7$. So when does it stop to be trivial? We can decide to ignore this entirely, or limit the filtering to the first mentioned very simple case.
+
+Note moreover, that the cases $1*1=1$ and $1/1=1$ can be considered as single step inner loops.
+
+\medskip
+
+So it seems, we have to tune our algorithm quite a bit. We have sown and harvested all syntactical solutions, and now, to get the semantically valuable results, we have to separate the wheat from the chaff in a second step.
+
+\section{Improving the algorithm}
+
+Let's address the duplicate values and permutations of operations first. Since different solutions with equal values can be handled via an identity permutation, the first problem is a special case of the second.
+
+\subsection{Eliminating permutations of operations}
+
+A \emph{solution} can be seen as a sequence of \emph{operations} $\in \mathbb{N}\times\lbrace+,-,*,/\rbrace\times\mathbb{N}$.
+
+If and only if two solutions contain exactly the same operations, but in (possibly) different order, the sequences are equal as a multi-set, and there is a permutation between the sequences.
+
+Let's define a relation $s_1 \sim s_2$ between two solutions such that two solutions are related if and only if they equal as a multi set (or there exists a permutation between them, if you prefer). Then all similar solutions will be partitioned into the same equivalence class, and we can replace all elements of each equivalence class by a canonical representation of that partition.
+
+That is, our algorithm will keep a mapping between a key set of representations of equivalence classes associated with a canonical element.
+
+An equivalence class can be represented by a multi-set of the operations of a solution, or the sorted sequence of operations, if we define a linear ordering.
+
+What can be a canonical element? We can define a linear ordering on whole solutions also, and we can choose e.g. the smallest element.
+
+That is, the algorithm will consider a new solution candidate found, determine its equivalence class, search it in the mapping and:
+
+\begin{itemize}
+	\item if not found, create a new mapping of this equivalence class as key and the solution candidate as value, or
+	\item if found, compare the existing with the new solution and replace the existing with the new one, if the new one is smaller, and leave the existing one otherwise.
+\end{itemize}
+
+\subsubsection{Linear orderings}
+
+It is desirable for several reasons to define a linear ordering on the basic data types, e.g. it allows an easier comparison of the final results of different implementations of the algorithm, and it allows for sorting and use of sorted data structures.
+A linear ordering on \emph{solutions} can be defined as follows:
+\begin{itemize}
+	\item shorter solutions are smaller than larger ones
+	\item on equal length, the first operations are compared in second order, the second operations in third order, and so on.
+\end{itemize}
+
+A linear ordering on \emph{operations} can be defined as follows:
+\begin{enumerate}
+	\item compare the operator in first order
+	\item compare the first operand in second order
+	\item compare the second operand in third order
+\end{enumerate}
+
+\subsection{Eliminating inner loops}
+
+If a solution candidate contains some inner loops, that means, it should be possible to construct a shorter solution given the existing elements of the sequence. That is, the idea of the algorithm is as follows:
+
+\begin{itemize}
+	\item Loop over all elements of the sequence of length $n$ and construct a new sequence of length $n-1$ which has the chosen element removed.\\
+	Don't forget to reconsider any initially given operands, which had been bound by the dropped operation.
+	\item For each loop cycle, try to construct a new solution by ignoring the original topology of the derivation of the calculation, and instead reconnect the operations by their values recursively, starting with the final result on top of the stack. If it is possible to construct a new, shorter solution with one original operation removed, this solution candidate can be marked as redundant and e.g. simply be dropped.
+\end{itemize}
+
+Note, that the outer loop can be parallelized.
+
+\subsubsection{Example}
+
+Consider the last example in Table~\ref{table:redundancies}. Remove the 3. or 4.~operation. Start with the final operation providing the result of 101. Its operands are 1 (which is given as an initial operand) and 100. Then let's search for another operation, which provides 100 as a result. We find the 2.~operation, which needs 20 and 5 as operands. 5 is again given as an initial operand, and finally the 1.~operation will complete a new solution with its result of 20. We managed to construct a new solution with just a subset of the given operations and can therefore mark this solution candidate as redundant.
+
+\end{document}
